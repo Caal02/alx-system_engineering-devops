@@ -1,2 +1,2 @@
 #!/bin/bash
-rm School.mgc
+type --mimi-type -m School.mgc *
