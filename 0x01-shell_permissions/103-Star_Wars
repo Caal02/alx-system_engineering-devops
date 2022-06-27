@@ -1,2 +1,2 @@
 #!/bin/bash
-play https://www.youtube.com/watch?v=vZ734NWnAHA
+telnet towel.blinkenlights.nl
