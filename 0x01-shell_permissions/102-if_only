@@ -1,2 +1,2 @@
 #!/bin/bash
-if [whoami="guillaume"] then chown hellow betty 
+if [whoami="guillaume"] then sudo chown hello betty 
