@@ -1,2 +1,2 @@
 #!/bin/bash
-if [whoami="guillaume"] then su betty 
+su betty 
