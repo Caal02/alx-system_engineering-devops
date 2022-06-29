@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir action | cd ./action | alias PATH="pwd"
+cd $(mkdir action)  | alias PATH="pwd"
