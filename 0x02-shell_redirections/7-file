@@ -1,2 +1,2 @@
 #!/bin/bash
-head -n3 iacta | sort -o iacta | tail -n1 iacta
+echo -e "Best School" > "\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)"
