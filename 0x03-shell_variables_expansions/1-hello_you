@@ -1,2 +1,2 @@
 #!/bin/bash
-echno "hello $USER"
+echo "hello $USER"
