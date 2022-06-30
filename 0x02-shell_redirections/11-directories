@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d | ls -l | wc -l  
+ls -l | find . -path "d.*" | ls -l | wc -l  
