@@ -1,2 +1,2 @@
 #!/bin/bash
-file -i -f School -m school
+ls $(file -i -f School -m school)
