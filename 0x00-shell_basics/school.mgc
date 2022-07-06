@@ -1,2 +1,2 @@
 #!/bin/bash
-ls $(file -i -f School -m school)
+file -m school.mgc*
