@@ -1,1 +1,2 @@
-ls | file . --name *
+#!/bin/bash
+file --type *
