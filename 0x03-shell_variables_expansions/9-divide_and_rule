@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "$(($P5OWER/$DIVIDE))"
+echo $(($POWER/$DIVIDE))
