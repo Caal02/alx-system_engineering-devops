@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+a="Best School"
+s="0"
+while [ $s -le 9 ]
+do
+	echo "$a"
+	s=$((s+1))
+done

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+a="Best School"
+s="10"
+until [ $s -lt 1 ]
+do
+	echo "$a"
+	s=$((s-1))
+done
