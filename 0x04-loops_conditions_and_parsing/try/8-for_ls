@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 ls="$(ls -1)"
 for i in $ls; do
-	echo "$i" | cut --complement -d "-" -f 1
+	echo "$i" | cut --complement -c 1-2
 done
