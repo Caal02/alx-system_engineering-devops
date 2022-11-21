@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-#ls -1 and part of name after dash is dispalyed
-ls="$(ls -1)"
-for i in $ls; do
-	echo "$i" | cut --complement -d "-" -f 1
+# Displays the content of the current directory in list format
+
+LIST="$(ls -1)"
+for i in $LIST; do
+    echo "$i" | cut -d'-' -f2
 done

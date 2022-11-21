@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
+#ls -1 and part of name after dash is dispalyed
 ls="$(ls -1)"
 for i in $ls; do
-	echo "$i" | cut --complement -c 1-2
+	echo "$i" | cut --complement -d "-" -f 1
 done
