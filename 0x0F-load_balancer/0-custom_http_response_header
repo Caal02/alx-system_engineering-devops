@@ -1,5 +1,4 @@
-hellcheck disable=SC2016
-# s
+#!/usr/bin/env bash
 # configures ubuntu serveur with custom header
 sudo apt-get -y update
 sudo apt-get -y upgrade
