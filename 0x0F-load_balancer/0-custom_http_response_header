@@ -1,9 +1,30 @@
 #!/usr/bin/env bash
-# Configures a brand new Ubuntu server with a custom HTTP header response
-apt-get -y update
-apt-get -y install nginx
-echo 'Hello world!' > /var/www/html/index.nginx-debian.html
-line="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=jTX8MSw0Ufw permanent;"
-sudo sed -i "26i $line" /etc/nginx/sites-available/default
-sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
-sudo service nginx restart
+# Configure a Nginx server with a custom HTTP header and two web pages.
+
+# Install Nginx
+apt update
+apt -y install nginx
+
+# Set hostname
+hostname -b $(hostnamectl --static)
+
+# Configure Nginx server
+echo 'server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /var/www/html;
+    index  index.html;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=jTX8MSw0Ufw;
+    }
+    error_page 404 /404.html;
+    add_header X-Served-By $HOSTNAME;
+}' > /etc/nginx/sites-available/default
+
+# Create website files
+mkdir -p /var/www/html
+echo "Helloworld!" > /var/www/html/index.html
+echo "page not found" > /var/www/html/404.html
+
+# Launch Nginx server
+nginx
