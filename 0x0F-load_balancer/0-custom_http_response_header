@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Configures a new Ubuntu server with a custom HTTP header response
 sudo apt-get -y update
 sudo apt-get -y install nginx
@@ -28,4 +29,16 @@ server_config=\
 }"
 
 echo "$server_config" > /etc/nginx/sites-enabled/default
+=======
+# configures ubuntu serveur with custom header
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+sudo chown -R "$USER":"$USER" /var/www/
+sudo chown -R "$USER":"$USER" /etc/nginx
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+line="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=jTX8MSw0Ufw permanent;"
+sudo sed -i "26i $line" /etc/nginx/sites-available/default
+sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+>>>>>>> ebad191200db343e1d900495439b93b9e616f9c3
 sudo service nginx restart

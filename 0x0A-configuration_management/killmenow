@@ -1,0 +1,6 @@
+#!/bin/bash
+# file to be killed
+while [[ true ]]
+do
+    sleep 2
+done
