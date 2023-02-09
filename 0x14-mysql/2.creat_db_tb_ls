@@ -5,5 +5,5 @@ mysql> SHOW tables;
 mysql> use tyrell_corp;
 mysql> INSERT INTO `nexus6` (`id`, `name`) VALUES (1, "Leon"); 
 mysql> SELECT * FROM nexus6;
-mysql> GRANT SELECT ON tyrell_corp.* TO 'holberton_user'@'localhost';                    
+mysql> GRANT SELECT ON tyrell_corp.* TO 'holberton_user'@'localhost'; 
 mysql> GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost';
