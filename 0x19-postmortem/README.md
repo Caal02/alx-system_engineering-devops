@@ -11,10 +11,10 @@ Apache server was returning a 500 error for all GET requests. The website consis
 Users unable to access website from at least midnight 9–11–2018 to 4:00 PM 9–12–2018. All servers affected by outage.
 
 ## Root Cause: 
-	Root cause of problem was a typogrpahical error for file name at line 137 of the file /var/www/html/wp-settings.php. Line read: require_once( ABSPATH . WPINC . ‘/class-wp-locale.phpp’ ); Extension for file should have been ‘.php’ Error likely caused by human error in updated settings and subsequent lack of testing to ensure server was still functional.
+Root cause of problem was a typogrpahical error for file name at line 137 of the file /var/www/html/wp-settings.php. Line read: require_once( ABSPATH . WPINC . ‘/class-wp-locale.phpp’ ); Extension for file should have been ‘.php’ Error likely caused by human error in updated settings and subsequent lack of testing to ensure server was still functional.
 
 ## Solution: 
-	Upon finding of error, a manual fix on one server was first completed to ensure the fix would work. A puppet file was then created to distribute across all servers.
+Upon finding of error, a manual fix on one server was first completed to ensure the fix would work. A puppet file was then created to distribute across all servers.
 
 ## Prevention:  
-	Error could have been easily prevented from user who updated config file to test that the server was still functional before exiting. In addition, debugging should not have been turned off for PHP files. The fix was quite obvious when error logging was turned back on. Testing procedures must be more strcitly enforced for production environments in future situations as well as more stringent monitoring and protection of who has access to write to config files.
+Error could have been easily prevented from user who updated config file to test that the server was still functional before exiting. In addition, debugging should not have been turned off for PHP files. The fix was quite obvious when error logging was turned back on. Testing procedures must be more strcitly enforced for production environments in future situations as well as more stringent monitoring and protection of who has access to write to config files.
