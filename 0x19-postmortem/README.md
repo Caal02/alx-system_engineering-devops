@@ -1,7 +1,7 @@
 #		Postmortem
 Postmortem for Alx Project Below is a postmortem for a webstack debugging assignment for Alx School. A simple website utilizing was returning a 500 status code to any GET requests. Students were tasked with identifying the problem and creating a Puppet script for the solution.
 
-##Summary:  
+## Summary:  
 	Apache server was returning a 500 error for all GET requests. The website consists of one HTML page so problem with MySQL or PHP was identified as the likely culprit.The issue is started at 29–02–2023, 12:03 AM PDT causing error every timewhile trying to acces the server up to 9–02–2023, 12:06 AM PDT
 
 ##Timeline:##
