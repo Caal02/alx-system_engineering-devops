@@ -53,8 +53,8 @@ frontend www-https
 backend www-backend
 	redirect scheme https if !{ ssl_fc }
 	balance roundrobin
-	server 77035-web-01 35.153.83.70:80 check
-	server 77035-web-02 100.25.196.41:80 check
+	server 77035-web-01 100.26.56.81:80 check
+	server 77035-web-02 54.172.84.41:80 check
 
 backend letsencrypt-backend
 	server letsencrypt 127.0.0.1:54321
