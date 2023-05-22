@@ -1,2 +1,2 @@
 # 0x15. API
-python
+python script
