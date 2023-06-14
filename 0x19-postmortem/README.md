@@ -1,3 +1,5 @@
+https://medium.com/@caaleb02/postmortem-webstack-debugging-4bead8041cc3
+
 #		Postmortem
 Postmortem for Alx Project Below is a postmortem for a webstack debugging assignment for Alx School. A simple website utilizing was returning a 500 status code to any GET requests. Students were tasked with identifying the problem and creating a Puppet script for the solution.
 
