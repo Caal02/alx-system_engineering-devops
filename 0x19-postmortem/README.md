@@ -1,5 +1,3 @@
-https://medium.com/@caaleb02/postmortem-webstack-debugging-4bead8041cc3
-
 #		Postmortem
 Postmortem for Alx Project Below is a postmortem for a webstack debugging assignment for Alx School. A simple website utilizing was returning a 500 status code to any GET requests. Students were tasked with identifying the problem and creating a Puppet script for the solution.
 
@@ -20,3 +18,4 @@ Upon finding of error, a manual fix on one server was first completed to ensure 
 
 ## Prevention:  
 Error could have been easily prevented from user who updated config file to test that the server was still functional before exiting. In addition, debugging should not have been turned off for PHP files. The fix was quite obvious when error logging was turned back on. Testing procedures must be more strcitly enforced for production environments in future situations as well as more stringent monitoring and protection of who has access to write to config files.
+medium => `https://medium.com/@caaleb02/postmortem-webstack-debugging-4bead8041cc3`
