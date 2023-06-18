@@ -1,2 +1,2 @@
 # 0x18. Webstack monitoring
-## using datadog
+## using datadog for monitoring
