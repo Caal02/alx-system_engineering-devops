@@ -1,0 +1,10 @@
+# config file for the serve a page for Nginx
+server {
+    listen 80;
+    server_name 77035-web-01;
+
+    location = /airbnb-onepage/ {
+        include proxy_params;
+        proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
+    }
+}
