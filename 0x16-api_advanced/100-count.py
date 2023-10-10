@@ -6,6 +6,8 @@ from requests import get
 
 REDDIT = "https://www.reddit.com/"
 HEADERS = {'user-agent': 'my-app/0.0.1'}
+
+
 def count_words(subreddit, word_list, after="", word_dic={}):
     """
     Returns a list containing the titles of all hot articles for a
