@@ -1,1 +1,1 @@
-shell readme
+shell readme projects
