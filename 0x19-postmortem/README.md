@@ -21,4 +21,3 @@ Error could have been easily prevented from user who updated config file to test
 
 The link for the full blog => 
 [@medium](https://medium.com/@caaleb02/postmortem-webstack-debugging-4bead8041cc3)
-https://medium.com/@caaleb02/postmortem-webstack-debugging-4bead8041cc3
