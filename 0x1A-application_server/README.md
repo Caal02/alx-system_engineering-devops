@@ -1,2 +1,2 @@
 # 0x1A. Application server
-Gunicorn
+Gunicorn with nginx
