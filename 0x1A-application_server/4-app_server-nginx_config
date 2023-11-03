@@ -1,4 +1,4 @@
-# config file for the serve a page for Nginx
+# configration file for the serve a page for Nginx
 server {
     # Listen on port 80
     listen      80 default_server;
