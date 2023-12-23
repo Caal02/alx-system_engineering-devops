@@ -1,0 +1,46 @@
+mysql> SHOW MASTER STATUS;
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000310 |     1131 | tyrell_corp  |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+
+# for vercion 8.0 #
+
+CHANGE REPLICATION SOURCE TO
+SOURCE_HOST = '100.26.56.81',
+SOURCE_USER = 'ubuntu',
+SOURCE_PASSWORD = '123',
+SOURCE_LOG_FILE = 'mysql-bin.000310',
+SOURCE_LOG_POS = 1131;
+------------------------------------------------------------------
+
+mysql> SHOW MASTER STATUS;
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000311 |      154 | tyrell_corp  |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+1 row in set (0.00 sec)
+
+-------------------------------------------------
+# for version 5.7 #
+mysql> CHANGE MASTER TO
+    ->     MASTER_HOST='source_host_name',
+    ->     MASTER_USER='replication_user_name',
+    ->     MASTER_PASSWORD='replication_password',
+    ->     MASTER_LOG_FILE='recorded_log_file_name',
+    ->     MASTER_LOG_POS=recorded_log_position;
+
+CHANGE MASTER TO
+MASTER_HOST='100.26.56.81',
+MASTER_USER='replica_user',
+MASTER_PASSWORD='123',
+MASTER_LOG_FILE='mysql-bin.000311',
+MASTER_LOG_POS=154;
+-----------------------------------------
+### Finally do this for version 5.7 ####
+-----------------------------------------
+START SLAVE;
+SHOW SLAVE STATUS\G;
+------------------------------------------

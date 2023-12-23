@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Install the load balanecer
+
+apt-get -y update
+apt-get -y install haproxy
+echo "ENABLED=1" >> /etc/default/haproxy
+cp /etc/haproxy/haproxy.cfg .
+cat >> /etc/haproxy/haproxy.cfg << EOF
+frontend asmamaw-alx-frontend
+	bind *:80
+	mode http
+	default_backend back
+backend asmamaw-alx-backend
+    balance roundrobin
+    server 77035-web-01 35.153.83.70:80 check
+    server 77035-web-01 100.25.196.41:80 check
+EOF
+service haproxy restart

@@ -1,0 +1,9 @@
+sudo mysql
+mysql>  CREATE USER 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn';
+mysql>  GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost';
+mysql>  FLUSH PRIVILEGES;
+
+TO Delet the user and data base we can use
+mysql>  DROP USER 'username'@'localhost';
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
